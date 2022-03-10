@@ -1,0 +1,21 @@
+[{
+        "id": "faceMask",
+        "name": "face mask",
+        "price": 250,
+        "quantityNameSingular": "face mask",
+        "quantityNamePlural": "face masks",
+        "discountQuantity": 2,
+        "discountPrice": 100,
+        "discountString": "2 Face Masks for £4"
+    },
+    {
+        "id": "toiletPaper",
+        "name": "toilet paper",
+        "price": 65,
+        "quantityNameSingular": "roll of toilet paper",
+        "quantityNamePlural": "rolls of toilet paper",
+        "discountQuantity": 4,
+        "discountPrice": 65,
+        "discountString": "6 rolls of Toilet Paper for the price of 5"
+    }
+]
