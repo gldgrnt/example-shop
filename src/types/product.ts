@@ -1,7 +1,7 @@
 export interface IProductData {
     id: string;
     name: string;
-    price: number;
+    unitPrice: number;
     quantityNameSingular: string;
     quantityNamePlural: string;
     discountQuantity: number;
@@ -10,5 +10,6 @@ export interface IProductData {
 }
 
 export interface IProduct extends IProductData {
-    getPrice: (quantity: number) => number;
+    getTotalPrice: (quantity: number) => number;
+    getDiscount: (quantity: number) => number;
 }
