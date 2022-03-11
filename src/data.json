@@ -1,7 +1,7 @@
 [{
         "id": "faceMask",
         "name": "face mask",
-        "price": 250,
+        "unitPrice": 250,
         "quantityNameSingular": "face mask",
         "quantityNamePlural": "face masks",
         "discountQuantity": 2,
@@ -11,7 +11,7 @@
     {
         "id": "toiletPaper",
         "name": "toilet paper",
-        "price": 65,
+        "unitPrice": 65,
         "quantityNameSingular": "roll of toilet paper",
         "quantityNamePlural": "rolls of toilet paper",
         "discountQuantity": 4,
