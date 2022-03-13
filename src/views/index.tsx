@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 
-import { Container } from "components/shared/Container";
+import { Container } from "components/Container";
 import { Header } from "components/Header";
 import { TView } from "types/views";
 import { BasketProvider } from "state/basket";

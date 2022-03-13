@@ -2,7 +2,7 @@ import { Stack, Button } from "@mui/material";
 
 import { IProps } from "./Header.types";
 
-import { Container } from "components/shared/Container";
+import { Container } from "components/Container";
 import { useBasketContext } from "state/basket";
 import { useMemo } from "react";
 

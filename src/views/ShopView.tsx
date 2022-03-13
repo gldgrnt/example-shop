@@ -1,5 +1,5 @@
 import { SingleProduct } from "components/SingleProduct";
-import { ViewContainer } from "components/shared/ViewContainer";
+import { ViewContainer } from "components/ViewContainer";
 import { IViewProps } from "types/views";
 
 const ShopView = ({ productData }: IViewProps) => {

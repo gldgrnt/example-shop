@@ -1,11 +1,11 @@
 import { useMemo } from "react";
 
 import { BasketTable } from "components/BasketTable";
+import { ViewContainer } from "components/ViewContainer";
 import { createBasketTableRows } from "helpers/basket";
 import { useBasketContext } from "state/basket";
 import { IViewProps } from "types/views";
 import { Button } from "@mui/material";
-import { ViewContainer } from "components/shared/ViewContainer";
 
 const BasketView = ({ productData, setView }: IViewProps) => {
   const { state } = useBasketContext();
