@@ -14,6 +14,10 @@ const Header = ({ view, setView }: IProps) => {
     return state.reduce((total, item) => total + item.quantity, 0);
   }, [state]);
 
+  const basketQuantityLabel = basketQuantity
+    ? `${basketQuantity} items in your basket.`
+    : "There are no items in your basket.";
+
   return (
     <header style={{ padding: "1rem 0" }}>
       <Container>
@@ -22,6 +26,7 @@ const Header = ({ view, setView }: IProps) => {
             variant="contained"
             disabled={view === "shop"}
             onClick={() => setView("shop")}
+            aria-label="View the shop"
           >
             Shop
           </Button>
@@ -29,9 +34,13 @@ const Header = ({ view, setView }: IProps) => {
             variant="contained"
             disabled={view === "basket"}
             onClick={() => setView("basket")}
+            aria-label={`View your basket. ${basketQuantityLabel}`}
           >
-            Basket ({basketQuantity})
+            Basket {view === "shop" && `(${basketQuantity})`}
           </Button>
+          <span className="sr-only" aria-live="polite">
+            {basketQuantityLabel}
+          </span>
         </Stack>
       </Container>
     </header>

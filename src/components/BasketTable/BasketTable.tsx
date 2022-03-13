@@ -50,7 +50,7 @@ const BasketTable = ({ rows }: IProps) => {
 
   return (
     <TableContainer>
-      <Table size="small" aria-label="a dense table">
+      <Table size="small" aria-label="Your basket">
         <TableHead>
           <TableRow>
             <TableCell>Item</TableCell>
@@ -69,30 +69,30 @@ const BasketTable = ({ rows }: IProps) => {
               <TableRow key={product.id}>
                 <TableCell component="th" scope="row">
                   <div style={{ display: "flex", alignItems: "center" }}>
+                    <span style={{ textTransform: "capitalize", order: 2 }}>
+                      {product.name} <br /> {formatPrice(product.unitPrice)}
+                    </span>
                     <IconButton
-                      aria-label="delete"
+                      aria-label={`Delete ${product.name} from your basket`}
                       size="small"
                       onClick={() => removeFromBasket(product.id)}
-                      sx={{ marginRight: "0.5rem" }}
+                      sx={{ marginRight: "0.5rem", order: 1 }}
                     >
                       <DeleteIcon fontSize="inherit" />
                     </IconButton>
-                    <span style={{ textTransform: "capitalize" }}>
-                      {product.name} <br /> {formatPrice(product.unitPrice)}
-                    </span>
                   </div>
                 </TableCell>
                 <TableCell>
                   <IconButton
-                    aria-label="plus"
+                    aria-label={`Remove 1 ${product.quantityNameSingular}`}
                     size="small"
                     onClick={() => decrementQuanity(product.id)}
                   >
                     <RemoveCircle />
                   </IconButton>
-                  {product.quantity}
+                  <span aria-label={`${product}`}>{product.quantity}</span>
                   <IconButton
-                    aria-label="remove"
+                    aria-label={`Add another ${product.quantityNameSingular}`}
                     size="small"
                     onClick={() => incrementQuanity(product.id)}
                   >
@@ -107,12 +107,11 @@ const BasketTable = ({ rows }: IProps) => {
               </TableRow>
             );
           })}
-          <TableRow sx={{ backgroundColor: "#F4F4F4" }}>
-            <TableCell colSpan={3} />
-            <TableCell>
-              <strong>Total to pay</strong>
+          <TableRow style={{ backgroundColor: "#F4F4F4" }}>
+            <TableCell colSpan={4}>
+              <strong>Total to pay:</strong>
             </TableCell>
-            <TableCell>
+            <TableCell aria-live="polite">
               <strong>{formatPrice(totalToPay)}</strong>
             </TableCell>
           </TableRow>
