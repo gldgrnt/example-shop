@@ -2,7 +2,7 @@ import { SingleProduct } from "components/SingleProduct";
 import { ViewContainer } from "components/ViewContainer";
 import { IViewProps } from "types/views";
 
-const ShopView = ({ productData }: IViewProps) => {
+const Shop = ({ productData }: IViewProps) => {
   return (
     <ViewContainer title="Shop">
       <ul
@@ -24,4 +24,4 @@ const ShopView = ({ productData }: IViewProps) => {
   );
 };
 
-export default ShopView;
+export default Shop;

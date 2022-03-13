@@ -4,10 +4,10 @@ import { Container } from "components/Container";
 import { Header } from "components/Header";
 import { TView } from "types/views";
 import { BasketProvider } from "state/basket";
-
-import ShopView from "./ShopView";
-import BasketView from "./BasketView";
 import { getProductData } from "helpers/product";
+
+import { Shop } from "./Shop";
+import { Basket } from "./Basket";
 
 const App = () => {
   const [view, setView] = useState<TView>("shop");
@@ -19,10 +19,10 @@ const App = () => {
       <main style={{ padding: "2rem 0" }}>
         <Container>
           {view === "shop" && (
-            <ShopView productData={productData} setView={setView} />
+            <Shop productData={productData} setView={setView} />
           )}
           {view === "basket" && (
-            <BasketView productData={productData} setView={setView} />
+            <Basket productData={productData} setView={setView} />
           )}
         </Container>
       </main>

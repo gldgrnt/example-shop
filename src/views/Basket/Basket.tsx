@@ -1,13 +1,13 @@
 import { useMemo } from "react";
+import { Button } from "@mui/material";
 
 import { BasketTable } from "components/BasketTable";
 import { ViewContainer } from "components/ViewContainer";
 import { createBasketTableRows } from "helpers/basket";
 import { useBasketContext } from "state/basket";
 import { IViewProps } from "types/views";
-import { Button } from "@mui/material";
 
-const BasketView = ({ productData, setView }: IViewProps) => {
+const Basket = ({ productData, setView }: IViewProps) => {
   const { state } = useBasketContext();
   const isBasketEmpty = state.length < 1;
 
@@ -31,4 +31,4 @@ const BasketView = ({ productData, setView }: IViewProps) => {
   );
 };
 
-export default BasketView;
+export default Basket;
