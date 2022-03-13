@@ -67,21 +67,19 @@ const BasketTable = ({ rows }: IProps) => {
 
             return (
               <TableRow key={product.id}>
-                <TableCell
-                  component="th"
-                  scope="row"
-                  sx={{ display: "flex", alignItems: "center" }}
-                >
-                  <IconButton
-                    aria-label="delete"
-                    size="small"
-                    onClick={() => removeFromBasket(product.id)}
-                    sx={{ marginRight: "0.5rem" }}
-                  >
-                    <DeleteIcon fontSize="inherit" />
-                  </IconButton>
-                  <div style={{ textTransform: "capitalize" }}>
-                    {product.name} <br /> {formatPrice(product.unitPrice)}
+                <TableCell component="th" scope="row">
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <IconButton
+                      aria-label="delete"
+                      size="small"
+                      onClick={() => removeFromBasket(product.id)}
+                      sx={{ marginRight: "0.5rem" }}
+                    >
+                      <DeleteIcon fontSize="inherit" />
+                    </IconButton>
+                    <span style={{ textTransform: "capitalize" }}>
+                      {product.name} <br /> {formatPrice(product.unitPrice)}
+                    </span>
                   </div>
                 </TableCell>
                 <TableCell>
