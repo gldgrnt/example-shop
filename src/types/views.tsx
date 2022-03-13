@@ -4,4 +4,5 @@ export type TView = "shop" | "basket";
 
 export interface IViewProps {
   productData: IProduct[];
+  setView: (view: TView) => void;
 }

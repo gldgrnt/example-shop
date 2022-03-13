@@ -18,8 +18,12 @@ const App = () => {
       <Header view={view} setView={setView} />
       <main style={{ padding: "2rem 0" }}>
         <Container>
-          {view === "shop" && <ShopView productData={productData} />}
-          {view === "basket" && <BasketView productData={productData} />}
+          {view === "shop" && (
+            <ShopView productData={productData} setView={setView} />
+          )}
+          {view === "basket" && (
+            <BasketView productData={productData} setView={setView} />
+          )}
         </Container>
       </main>
       <footer style={{ padding: "1rem 0" }}>
