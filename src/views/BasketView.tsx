@@ -5,6 +5,7 @@ import { createBasketTableRows } from "helpers/basket";
 import { useBasketContext } from "state/basket";
 import { IViewProps } from "types/views";
 import { Button } from "@mui/material";
+import { ViewContainer } from "components/shared/ViewContainer";
 
 const BasketView = ({ productData, setView }: IViewProps) => {
   const { state } = useBasketContext();
@@ -15,8 +16,7 @@ const BasketView = ({ productData, setView }: IViewProps) => {
   }, [productData, state]);
 
   return (
-    <section>
-      <h2 style={{ marginTop: 0 }}>Basket</h2>
+    <ViewContainer title="Basket">
       {isBasketEmpty ? (
         <>
           <p>There are no items in your basket.</p>
@@ -27,7 +27,7 @@ const BasketView = ({ productData, setView }: IViewProps) => {
       ) : (
         <BasketTable rows={rows} />
       )}
-    </section>
+    </ViewContainer>
   );
 };
 

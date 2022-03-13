@@ -14,24 +14,48 @@ const SingleProduct = ({ product }: IProps) => {
   }, [dispatch, product.id]);
 
   return (
-    <div
+    <article
+      aria-label={product.name}
       style={{
         display: "flex",
         flexDirection: "column",
       }}
     >
-      <h3 style={{ textTransform: "capitalize" }}>{product.name}</h3>
+      <h2
+        style={{
+          textTransform: "capitalize",
+          marginTop: 0,
+          fontSize: "1.25rem",
+        }}
+      >
+        {product.name}
+      </h2>
       <p style={{ marginTop: 0 }}>Price: {formatPrice(product.unitPrice)}</p>
-      <Button variant="outlined" onClick={addToBasket}>
+      <details
+        open
+        style={{
+          padding: "0.5rem",
+          backgroundColor: "#F3F3F3",
+          marginBottom: "1rem",
+        }}
+      >
+        <summary style={{ display: "block" }}>
+          <strong style={{ textTransform: "capitalize", marginBottom: 0 }}>
+            {product.name} deal
+          </strong>
+        </summary>
+        <p style={{ marginTop: "0.5rem", marginBottom: 0 }}>
+          {product.discountString}
+        </p>
+      </details>
+      <Button
+        variant="outlined"
+        onClick={addToBasket}
+        aria-label={`Add 1 ${product.quantityNameSingular} to your basket`}
+      >
         Add to basket
       </Button>
-      <p style={{ padding: "1rem", backgroundColor: "#F3F3F3" }}>
-        <strong style={{ display: "block", marginBottom: "0.5rem" }}>
-          Discount
-        </strong>
-        <em>{product.discountString}</em>
-      </p>
-    </div>
+    </article>
   );
 };
 

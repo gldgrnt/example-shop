@@ -1,22 +1,26 @@
 import { SingleProduct } from "components/SingleProduct";
+import { ViewContainer } from "components/shared/ViewContainer";
 import { IViewProps } from "types/views";
 
 const ShopView = ({ productData }: IViewProps) => {
   return (
-    <section>
-      <h2 style={{ marginTop: 0 }}>Products</h2>
-      <div
+    <ViewContainer title="Shop">
+      <ul
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
           gridGap: "2rem",
+          padding: "0",
+          margin: "0",
         }}
       >
         {productData.map((product) => (
-          <SingleProduct key={product.id} product={product} />
+          <li key={product.id} style={{ listStyle: "none" }}>
+            <SingleProduct product={product} />
+          </li>
         ))}
-      </div>
-    </section>
+      </ul>
+    </ViewContainer>
   );
 };
 
