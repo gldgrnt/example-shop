@@ -38,7 +38,7 @@ const BasketTable = ({ rows }: IProps) => {
 
   const totalToPay = useMemo(
     () =>
-      rows.reduce(
+      rows?.reduce(
         (sum, product) =>
           sum +
           (product.getTotalPrice(product.quantity) -
@@ -61,12 +61,12 @@ const BasketTable = ({ rows }: IProps) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((product) => {
+          {rows?.map((product) => {
             const total = product.getTotalPrice(product.quantity);
             const discount = product.getDiscount(product.quantity);
 
             return (
-              <TableRow key={product.id}>
+              <TableRow key={product.id} data-testid={`${product.id}-row`}>
                 <TableCell component="th" scope="row">
                   <div style={{ display: "flex", alignItems: "center" }}>
                     <span style={{ textTransform: "capitalize", order: 2 }}>
@@ -77,6 +77,7 @@ const BasketTable = ({ rows }: IProps) => {
                       size="small"
                       onClick={() => removeFromBasket(product.id)}
                       sx={{ marginRight: "0.5rem", order: 1 }}
+                      data-testid={`${product.id}-delete`}
                     >
                       <DeleteIcon fontSize="inherit" />
                     </IconButton>
@@ -87,14 +88,18 @@ const BasketTable = ({ rows }: IProps) => {
                     aria-label={`Remove 1 ${product.quantityNameSingular}`}
                     size="small"
                     onClick={() => decrementQuanity(product.id)}
+                    data-testid={`${product.id}-decrement`}
                   >
                     <RemoveCircle />
                   </IconButton>
-                  <span aria-label={`${product}`}>{product.quantity}</span>
+                  <span data-testid={`${product.id}-quantity`}>
+                    {product.quantity}
+                  </span>
                   <IconButton
                     aria-label={`Add another ${product.quantityNameSingular}`}
                     size="small"
                     onClick={() => incrementQuanity(product.id)}
+                    data-testid={`${product.id}-increment`}
                   >
                     <AddCircle />
                   </IconButton>
