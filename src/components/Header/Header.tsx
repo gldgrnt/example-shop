@@ -34,7 +34,7 @@ const Header = ({ view, setView }: IProps) => {
             variant="contained"
             disabled={view === "basket"}
             onClick={() => setView("basket")}
-            aria-label={`View your basket. ${basketQuantityLabel}`}
+            aria-label={`View the basket`}
           >
             Basket {view === "shop" && `(${basketQuantity})`}
           </Button>
