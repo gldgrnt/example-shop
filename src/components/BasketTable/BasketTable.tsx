@@ -116,7 +116,7 @@ const BasketTable = ({ rows }: IProps) => {
             <TableCell colSpan={4}>
               <strong>Total to pay:</strong>
             </TableCell>
-            <TableCell aria-live="polite">
+            <TableCell aria-live="polite" data-testid="basket-table-total">
               <strong>{formatPrice(totalToPay)}</strong>
             </TableCell>
           </TableRow>
