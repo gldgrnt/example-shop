@@ -16,7 +16,7 @@ const App = () => {
   return (
     <BasketProvider>
       <Header view={view} setView={setView} />
-      <main style={{ padding: "2rem 0" }}>
+      <main data-testid="app-main" style={{ padding: "2rem 0" }}>
         <Container>
           {view === "shop" && (
             <Shop productData={productData} setView={setView} />
