@@ -27,7 +27,7 @@ const App = () => {
         </Container>
       </main>
       <footer style={{ padding: "1rem 0" }}>
-        <Container>&copy; This is my Example Store with tokens!</Container>
+        <Container>&copy; This is my Example Store</Container>
       </footer>
     </BasketProvider>
   );
