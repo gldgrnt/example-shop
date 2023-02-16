@@ -27,7 +27,7 @@ const App = () => {
         </Container>
       </main>
       <footer style={{ padding: "1rem 0" }}>
-        <Container>&copy; Example Store</Container>
+        <Container>&copy; Example Store footer copy</Container>
       </footer>
     </BasketProvider>
   );
