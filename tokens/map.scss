@@ -1,0 +1,119 @@
+
+/**
+ * Do not edit directly
+ * Generated on Fri, 17 Feb 2023 15:00:47 GMT
+ */
+
+$primary-default: #c70b0c !default;
+$primary-hover: #8b0c0c !default;
+$primary-random: #551212 !default;
+$secondary-default: #8baf22 !default;
+$secondary-hover: #759617 !default;
+$tertiary-default: #ff00ef !default;
+$tertiary-dark: #680079 !default;
+$red-100: #c70b0b !default;
+$red-200: #8b0c0c !default;
+$red-300: #800000 !default;
+$green-100: #8baf22 !default;
+$green-200: #759617 !default;
+$my-local-shadow-color: #00000040 !default;
+$my-local-shadow-type: dropShadow !default;
+$my-local-shadow-x: 0 !default;
+$my-local-shadow-y: 4 !default;
+$my-local-shadow-blur: 4 !default;
+$my-local-shadow-spread: 0 !default;
+$font-families-inter: Inter !default;
+$line-heights-0: AUTO !default;
+$font-weights-inter-0: Regular !default;
+$font-size-0: 12 !default;
+$letter-spacing-0: 0% !default;
+$paragraph-spacing-0: 0 !default;
+$my-local-text-style-font-family: Inter !default;
+$my-local-text-style-font-weight: Regular !default;
+$my-local-text-style-line-height: AUTO !default;
+$my-local-text-style-font-size: 12 !default;
+$my-local-text-style-letter-spacing: 0% !default;
+$my-local-text-style-paragraph-spacing: 0 !default;
+$my-local-text-style-paragraph-indent: 0px !default;
+$my-local-text-style-text-case: none !default;
+$my-local-text-style-text-decoration: none !default;
+$text-case-none: none !default;
+$text-decoration-none: none !default;
+$paragraph-indent-0: 0px !default;
+$purple-light: #ff00ef !default;
+$purple-dark: #680079 !default;
+
+$tokens: (
+  'primary': (
+    'default': $primary-default,
+    'hover': $primary-hover,
+    'random': $primary-random
+  ),
+  'secondary': (
+    'default': $secondary-default,
+    'hover': $secondary-hover
+  ),
+  'tertiary': (
+    'default': $tertiary-default,
+    'dark': $tertiary-dark
+  ),
+  'red': (
+    '100': $red-100,
+    '200': $red-200,
+    '300': $red-300
+  ),
+  'green': (
+    '100': $green-100,
+    '200': $green-200
+  ),
+  'My local shadow': (
+    'color': $my-local-shadow-color,
+    'type': $my-local-shadow-type,
+    'x': $my-local-shadow-x,
+    'y': $my-local-shadow-y,
+    'blur': $my-local-shadow-blur,
+    'spread': $my-local-shadow-spread
+  ),
+  'fontFamilies': (
+    'inter': $font-families-inter
+  ),
+  'lineHeights': (
+    '0': $line-heights-0
+  ),
+  'fontWeights': (
+    'inter-0': $font-weights-inter-0
+  ),
+  'fontSize': (
+    '0': $font-size-0
+  ),
+  'letterSpacing': (
+    '0': $letter-spacing-0
+  ),
+  'paragraphSpacing': (
+    '0': $paragraph-spacing-0
+  ),
+  'My local text style': (
+    'fontFamily': $my-local-text-style-font-family,
+    'fontWeight': $my-local-text-style-font-weight,
+    'lineHeight': $my-local-text-style-line-height,
+    'fontSize': $my-local-text-style-font-size,
+    'letterSpacing': $my-local-text-style-letter-spacing,
+    'paragraphSpacing': $my-local-text-style-paragraph-spacing,
+    'paragraphIndent': $my-local-text-style-paragraph-indent,
+    'textCase': $my-local-text-style-text-case,
+    'textDecoration': $my-local-text-style-text-decoration
+  ),
+  'textCase': (
+    'none': $text-case-none
+  ),
+  'textDecoration': (
+    'none': $text-decoration-none
+  ),
+  'paragraphIndent': (
+    '0': $paragraph-indent-0
+  ),
+  'purple': (
+    'light': $purple-light,
+    'dark': $purple-dark
+  )
+);
