@@ -5,7 +5,7 @@ on:
   pull_request:
     types:
       - opened
-      - synchronize 
+      - synchronize
 
 jobs:
   build:
@@ -16,11 +16,6 @@ jobs:
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
       contents: write
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Block Fixup Commit Merge
-        uses: 13rac1/block-fixup-merge-action@v1.1.2
 
     steps:
       - uses: actions/checkout@v3
