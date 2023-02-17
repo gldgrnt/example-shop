@@ -28,4 +28,4 @@ jobs:
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit-message: Update tokens
+          commit_message: Update tokens
