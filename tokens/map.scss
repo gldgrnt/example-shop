@@ -1,7 +1,7 @@
 
 /**
  * Do not edit directly
- * Generated on Fri, 17 Feb 2023 14:46:42 GMT
+ * Generated on Fri, 17 Feb 2023 14:50:18 GMT
  */
 
 $primary-default: #c70b0c !default;
@@ -9,8 +9,8 @@ $primary-hover: #8b0c0c !default;
 $primary-random: #551212 !default;
 $secondary-default: #8baf22 !default;
 $secondary-hover: #759617 !default;
-$zany-default: #ff00ef !default;
-$zany-dark: #680079 !default;
+$tertiary-default: #ff00ef !default;
+$tertiary-dark: #680079 !default;
 $red-100: #c70b0b !default;
 $red-200: #8b0c0c !default;
 $red-300: #800000 !default;
@@ -53,9 +53,9 @@ $tokens: (
     'default': $secondary-default,
     'hover': $secondary-hover
   ),
-  'zany': (
-    'default': $zany-default,
-    'dark': $zany-dark
+  'tertiary': (
+    'default': $tertiary-default,
+    'dark': $tertiary-dark
   ),
   'red': (
     '100': $red-100,
