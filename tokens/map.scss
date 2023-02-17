@@ -1,7 +1,7 @@
 
 /**
  * Do not edit directly
- * Generated on Fri, 17 Feb 2023 15:00:47 GMT
+ * Generated on Fri, 17 Feb 2023 15:05:52 GMT
  */
 
 $primary-default: #c70b0c !default;
@@ -39,9 +39,9 @@ $my-local-text-style-text-case: none !default;
 $my-local-text-style-text-decoration: none !default;
 $text-case-none: none !default;
 $text-decoration-none: none !default;
-$paragraph-indent-0: 0px !default;
-$purple-light: #ff00ef !default;
+$purple-default: #ff00ef !default;
 $purple-dark: #680079 !default;
+$paragraph-indent-0: 0px !default;
 
 $tokens: (
   'primary': (
@@ -109,11 +109,11 @@ $tokens: (
   'textDecoration': (
     'none': $text-decoration-none
   ),
+  'purple': (
+    'default': $purple-default,
+    'dark': $purple-dark
+  ),
   'paragraphIndent': (
     '0': $paragraph-indent-0
-  ),
-  'purple': (
-    'light': $purple-light,
-    'dark': $purple-dark
   )
 );
