@@ -25,7 +25,15 @@ jobs:
       - name: Build tokens
         run: |
           npm run build-tokens
-      # Commit all changed files back to the repository
-      - uses: stefanzweifel/git-auto-commit-action@v4
+        
+      - name: Get changed files in the docs folder
+        id: changed-files-specific
+        uses: tj-actions/changed-files@v35
         with:
-          commit-message: Update tokens
+          files: tokens.json
+
+      - name: Run step if any file(s) in the docs folder change
+        if: steps.changed-files-specific.outputs.any_changed == 'true'
+         uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update tokens
